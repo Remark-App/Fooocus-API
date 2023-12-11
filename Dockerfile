@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.2.0-runtime-ubuntu22.04
+FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
@@ -15,7 +15,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install packaging
 
 WORKDIR /app
-
 COPY . /app/
-
+RUN python3 prepare.py
+RUN mv config.txt.bak config.txt
 CMD python3 main.py --host 0.0.0.0 --port 8888

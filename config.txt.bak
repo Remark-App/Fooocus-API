@@ -1,0 +1,13 @@
+{
+    "path_checkpoints": "/data/sdxl/fooocus/models/checkpoints",
+    "path_loras": "/data/sdxl/fooocus/models/loras",
+    "path_embeddings": "/data/sdxl/fooocus/models/embeddings",
+    "path_vae_approx": "/data/sdxl/fooocus/models/vae_approx",
+    "path_upscale_models": "/data/sdxl/fooocus/models/upscale_models",
+    "path_inpaint": "/data/sdxl/fooocus/models/inpaint",
+    "path_controlnet": "/data/sdxl/fooocus/models/controlnet",
+    "path_clip_vision": "/data/sdxl/fooocus/models/clip_vision",
+    "path_fooocus_expansion": "/data/sdxl/fooocus/models/prompt_expansion/fooocus_expansion",
+    "path_outputs": "/home/root/app/outputs",
+    "default_model": "sdXL_v10VAEFix.safetensors"
+}
