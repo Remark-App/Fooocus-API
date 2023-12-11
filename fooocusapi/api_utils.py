@@ -24,10 +24,10 @@ def req_to_params(req: Text2ImgRequest) -> ImageGenerationParams:
             print(f"[Warning] Wrong refiner_model_name input: {req.refiner_model_name}, using default")
             req.refiner_model_name = default_refiner_model_name
 
-    for l in req.loras:
-        if l.model_name != 'None' and l.model_name not in config.lora_filenames:
-            print(f"[Warning] Wrong lora model_name input: {l.model_name}, using 'None'")
-            l.model_name = 'None'
+    # for l in req.loras:
+    #     if l.model_name != 'None' and l.model_name not in config.lora_filenames:
+    #         print(f"[Warning] Wrong lora model_name input: {l.model_name}, using 'None'")
+    #         l.model_name = 'None'
 
     prompt = req.prompt
     negative_prompt = req.negative_prompt
